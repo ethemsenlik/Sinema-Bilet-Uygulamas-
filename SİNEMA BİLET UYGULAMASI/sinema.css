@@ -1,0 +1,78 @@
+body {
+    background-color: #292929;
+    margin: 0;
+    display: flex; /*  kapsayıcı içerisindeki öğelere esneklik verir  */ 
+    justify-content: center;  /*  Nesneler tam ortalı olacak şekilde hizalanır.  */
+    align-items: center;  /*  Elemanlar flex-direction'a zıt eksende ortalanırlar  */
+    height: 100vh;  /*  katman boyutu maximum tam ekran yüksekliğinde olur  */
+    flex-direction: column;  /*  flex yapısında kolonların hizasında devam etmesini sağlar  */
+    color: #fff;
+}
+
+.seat {
+    background-color: #444451;
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.seat.selected {
+    background-color: #f6eb6f;
+}
+
+.seat.reserved {
+    background-color: #fff;
+}
+
+.seat:not(.reserved):hover {    /*  reserved olan koltuklar hariç diğer tüm koltukları üzerine mause gelince büyüttük ve imleç ekledik  */
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+.seat:nth-of-type(2){   /*  koltukların ikinci kolonundan itibaren sola margin verdik  */
+    margin-right: 20px;
+}
+
+.seat:nth-last-of-type(2){   /*  koltukların sondan ikinci sırasından itibaren sağa margin verdik  */
+    margin-left: 20px;
+}
+
+.row {
+    display: flex;
+}
+
+.screen {
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    margin: 0 0 35px 0;
+    box-shadow: 0 3px 8px rgba(255, 255, 255, 0.7);   /*  ekrana gölge verdik  */
+}
+
+.movie-list {
+    margin: 20px 0;
+}
+
+.info {
+    background-color: rgba(55, 55, 55, 0.4);
+    padding: 5px 10px;
+    color: #777;
+    display: flex;
+
+}
+
+.info li {
+    display: flex;
+    align-items: center;    /*  yatayda ve dikeyde hizalarlar  */
+    justify-content: center;
+    margin: 0 10px;
+}
+
+p.text {
+    color:aqua
+}
+
+p.text span {
+    color: #f6eb6f;
+}
